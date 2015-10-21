@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  SearchMasterViewController.swift
 //  SampleDDGApp
 //
 //  Created by Christina McIntyre on 10/19/15.
@@ -8,14 +8,13 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class SearchMasterViewController: UIViewController {
 
-	@IBAction func searchDDGGetRequest(sender: UIButton) {
-	}
+	
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		let baseURL = NSURL(string: "http://api.duckduckgo.com/?q="
-		let searchTopicURL = NSURL(string: "\(searchTopic)&format=json&t=SampleDDGApp")
+	
+		
 	}
 
 	override func didReceiveMemoryWarning() {

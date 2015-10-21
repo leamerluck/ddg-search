@@ -8,12 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		83B1CAD71BD5BF7800C058B8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B1CAD61BD5BF7800C058B8 /* AppDelegate.swift */; };
-		83B1CAD91BD5BF7800C058B8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B1CAD81BD5BF7800C058B8 /* ViewController.swift */; };
+		83B1CAD91BD5BF7800C058B8 /* SearchMasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B1CAD81BD5BF7800C058B8 /* SearchMasterViewController.swift */; };
 		83B1CADC1BD5BF7800C058B8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83B1CADA1BD5BF7800C058B8 /* Main.storyboard */; };
 		83B1CADE1BD5BF7800C058B8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 83B1CADD1BD5BF7800C058B8 /* Assets.xcassets */; };
 		83B1CAE11BD5BF7800C058B8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83B1CADF1BD5BF7800C058B8 /* LaunchScreen.storyboard */; };
 		83B1CAEC1BD5BF7800C058B8 /* SampleDDGAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B1CAEB1BD5BF7800C058B8 /* SampleDDGAppTests.swift */; };
 		83B1CAF71BD5BF7800C058B8 /* SampleDDGAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B1CAF61BD5BF7800C058B8 /* SampleDDGAppUITests.swift */; };
+		83EBDA421BD7CBBF001FEE59 /* SearchResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83EBDA411BD7CBBF001FEE59 /* SearchResultsViewController.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +37,7 @@
 /* Begin PBXFileReference section */
 		83B1CAD31BD5BF7800C058B8 /* SampleDDGApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SampleDDGApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		83B1CAD61BD5BF7800C058B8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		83B1CAD81BD5BF7800C058B8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		83B1CAD81BD5BF7800C058B8 /* SearchMasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchMasterViewController.swift; sourceTree = "<group>"; };
 		83B1CADB1BD5BF7800C058B8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		83B1CADD1BD5BF7800C058B8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		83B1CAE01BD5BF7800C058B8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +48,7 @@
 		83B1CAF21BD5BF7800C058B8 /* SampleDDGAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SampleDDGAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		83B1CAF61BD5BF7800C058B8 /* SampleDDGAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleDDGAppUITests.swift; sourceTree = "<group>"; };
 		83B1CAF81BD5BF7800C058B8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		83EBDA411BD7CBBF001FEE59 /* SearchResultsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResultsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,7 +100,8 @@
 			isa = PBXGroup;
 			children = (
 				83B1CAD61BD5BF7800C058B8 /* AppDelegate.swift */,
-				83B1CAD81BD5BF7800C058B8 /* ViewController.swift */,
+				83B1CAD81BD5BF7800C058B8 /* SearchMasterViewController.swift */,
+				83EBDA411BD7CBBF001FEE59 /* SearchResultsViewController.swift */,
 				83B1CADA1BD5BF7800C058B8 /* Main.storyboard */,
 				83B1CADD1BD5BF7800C058B8 /* Assets.xcassets */,
 				83B1CADF1BD5BF7800C058B8 /* LaunchScreen.storyboard */,
@@ -255,7 +258,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				83B1CAD91BD5BF7800C058B8 /* ViewController.swift in Sources */,
+				83B1CAD91BD5BF7800C058B8 /* SearchMasterViewController.swift in Sources */,
+				83EBDA421BD7CBBF001FEE59 /* SearchResultsViewController.swift in Sources */,
 				83B1CAD71BD5BF7800C058B8 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -481,6 +485,7 @@
 				83B1CAFD1BD5BF7800C058B8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		83B1CAFE1BD5BF7800C058B8 /* Build configuration list for PBXNativeTarget "SampleDDGAppTests" */ = {
 			isa = XCConfigurationList;
@@ -489,6 +494,7 @@
 				83B1CB001BD5BF7800C058B8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		83B1CB011BD5BF7800C058B8 /* Build configuration list for PBXNativeTarget "SampleDDGAppUITests" */ = {
 			isa = XCConfigurationList;
@@ -497,6 +503,7 @@
 				83B1CB031BD5BF7800C058B8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
