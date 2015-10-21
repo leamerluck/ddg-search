@@ -10,9 +10,12 @@ import UIKit
 
 class ViewController: UIViewController {
 
+	@IBAction func searchDDGGetRequest(sender: UIButton) {
+	}
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		// Do any additional setup after loading the view, typically from a nib.
+		let baseURL = NSURL(string: "http://api.duckduckgo.com/?q="
+		let searchTopicURL = NSURL(string: "\(searchTopic)&format=json&t=SampleDDGApp")
 	}
 
 	override func didReceiveMemoryWarning() {
