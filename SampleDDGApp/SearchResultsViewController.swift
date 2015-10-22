@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SearchResultsViewController: UIViewController, UITableViewDataSource {
+class SearchResultsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
 	@IBOutlet weak var queryTopic: UILabel!
 	
@@ -34,28 +34,23 @@ class SearchResultsViewController: UIViewController, UITableViewDataSource {
 	
     override func viewDidLoad() {
         super.viewDidLoad()
+			queryTopic.text = "You searched for: \(searchTermPassed)"
 			
-			queryTopic.text = searchTermPassed
 			let jsonError: NSError? = nil
 			
 			let searchURL = NSURL(string: "http://api.duckduckgo.com/?q=\(searchTermPassed)&format=json&pretty=1&tSampleDDGApp")
 			
 			let task = NSURLSession.sharedSession().dataTaskWithURL(searchURL!) {(data, response, error) in
-			let text = (NSString(data: data!, encoding: NSUTF8StringEncoding))
+				let text = (NSString(data: data!, encoding: NSUTF8StringEncoding))
 			}
-			
-			task.resume()
-			
-			
-			
 	}
-
+	
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-	
-	}
- 
+}
+
+
 
 
