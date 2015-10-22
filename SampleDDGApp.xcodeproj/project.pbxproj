@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		83779DCD1BD85D8400C897D2 /* Topic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83779DCC1BD85D8400C897D2 /* Topic.swift */; settings = {ASSET_TAGS = (); }; };
 		83B1CAD71BD5BF7800C058B8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B1CAD61BD5BF7800C058B8 /* AppDelegate.swift */; };
 		83B1CAD91BD5BF7800C058B8 /* SearchMasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B1CAD81BD5BF7800C058B8 /* SearchMasterViewController.swift */; };
 		83B1CADC1BD5BF7800C058B8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83B1CADA1BD5BF7800C058B8 /* Main.storyboard */; };
@@ -35,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		83779DCC1BD85D8400C897D2 /* Topic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Topic.swift; sourceTree = "<group>"; };
 		83B1CAD31BD5BF7800C058B8 /* SampleDDGApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SampleDDGApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		83B1CAD61BD5BF7800C058B8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		83B1CAD81BD5BF7800C058B8 /* SearchMasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchMasterViewController.swift; sourceTree = "<group>"; };
@@ -102,6 +104,7 @@
 				83B1CAD61BD5BF7800C058B8 /* AppDelegate.swift */,
 				83B1CAD81BD5BF7800C058B8 /* SearchMasterViewController.swift */,
 				83EBDA411BD7CBBF001FEE59 /* SearchResultsViewController.swift */,
+				83779DCC1BD85D8400C897D2 /* Topic.swift */,
 				83B1CADA1BD5BF7800C058B8 /* Main.storyboard */,
 				83B1CADD1BD5BF7800C058B8 /* Assets.xcassets */,
 				83B1CADF1BD5BF7800C058B8 /* LaunchScreen.storyboard */,
@@ -259,6 +262,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				83B1CAD91BD5BF7800C058B8 /* SearchMasterViewController.swift in Sources */,
+				83779DCD1BD85D8400C897D2 /* Topic.swift in Sources */,
 				83EBDA421BD7CBBF001FEE59 /* SearchResultsViewController.swift in Sources */,
 				83B1CAD71BD5BF7800C058B8 /* AppDelegate.swift in Sources */,
 			);

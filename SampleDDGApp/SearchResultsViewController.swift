@@ -10,31 +10,52 @@ import UIKit
 
 class SearchResultsViewController: UIViewController, UITableViewDataSource {
 
-	let results = [String]()
+	@IBOutlet weak var queryTopic: UILabel!
+	
+	var searchTermPassed:String!
+	
+	
+	var topics = [Topic]()
+	
+	
 	func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-		return results.count
+		return topics.count
 	}
 	
 	func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
 	
-		let resultsCell = tableView.dequeueReusableCellWithIdentifier("resultsCell", forIndexPath: indexPath) 
+		let resultCell = tableView.dequeueReusableCellWithIdentifier("resultCell", forIndexPath: indexPath) 
 	
-		resultsCell.textLabel?.text = results[indexPath.row]
+		resultCell.textLabel?.text = topics[indexPath.row].text
 		
-		return resultsCell
+		return resultCell
 	}
 	
 	
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
+			
+			queryTopic.text = searchTermPassed
+			let jsonError: NSError? = nil
+			
+			let searchURL = NSURL(string: "http://api.duckduckgo.com/?q=\(searchTermPassed)&format=json&pretty=1&tSampleDDGApp")
+			
+			let task = NSURLSession.sharedSession().dataTaskWithURL(searchURL!) {(data, response, error) in
+			let text = (NSString(data: data!, encoding: NSUTF8StringEncoding))
+			}
+			
+			task.resume()
+			
+			
+			
+	}
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+	
+	}
  
 
-}
+

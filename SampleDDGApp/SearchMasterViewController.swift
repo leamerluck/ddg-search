@@ -10,6 +10,11 @@ import UIKit
 
 class SearchMasterViewController: UIViewController {
 
+	@IBOutlet weak var searchTopic: UITextField!
+	
+	@IBAction func searchRequestButton(sender: UIButton) {
+		self.performSegueWithIdentifier("resultsSegue", sender: sender)
+	}
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
@@ -21,7 +26,14 @@ class SearchMasterViewController: UIViewController {
 		super.didReceiveMemoryWarning()
 		// Dispose of any resources that can be recreated.
 	}
-
+	
+	
+	override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+		if (segue.identifier == "resultsSegue") {
+			let searchResultsController = segue.destinationViewController as! SearchResultsViewController
+			searchResultsController.searchTermPassed = searchTopic.text!
+		}
+	}
 
 }
 
