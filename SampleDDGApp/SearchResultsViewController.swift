@@ -48,7 +48,7 @@ class SearchResultsViewController: UIViewController, UITableViewDataSource, UITa
 						let textShown = relatedTopic["Text"] as? String
 						let firstURL = relatedTopic["FirstURL"] as? String
 						if textShown != nil || firstURL != nil {
-							print("First URL result: \(firstURL)\n Text: \(textShown)")
+							print("First URL result: \(firstURL!)\n Text: \(textShown!)")
 						}
 						//topics.append(json: textShown!)
 					}
