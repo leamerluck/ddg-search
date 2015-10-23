@@ -26,7 +26,7 @@ class SearchResultsViewController: UIViewController, UITableViewDataSource, UITa
 	
 		let resultCell = tableView.dequeueReusableCellWithIdentifier("resultCell", forIndexPath: indexPath) 
 	
-		resultCell.textLabel?.text = topics[indexPath.row].text
+		resultCell.textLabel?.text = topics[indexPath.row].textShown
 		
 		return resultCell
 	}
@@ -34,16 +34,29 @@ class SearchResultsViewController: UIViewController, UITableViewDataSource, UITa
 	
     override func viewDidLoad() {
         super.viewDidLoad()
+			
 			queryTopic.text = "You searched for: \(searchTermPassed)"
 			
-			let jsonError: NSError? = nil
 			
 			let searchURL = NSURL(string: "http://api.duckduckgo.com/?q=\(searchTermPassed)&format=json&pretty=1&tSampleDDGApp")
-			
-			let task = NSURLSession.sharedSession().dataTaskWithURL(searchURL!) {(data, response, error) in
-				let text = (NSString(data: data!, encoding: NSUTF8StringEncoding))
+			do {
+				
+				let jsonData: NSData? = NSData(contentsOfURL: searchURL!)
+				if let jsonResult: NSDictionary = try NSJSONSerialization.JSONObjectWithData(jsonData!, options: NSJSONReadingOptions.MutableContainers) as? NSDictionary {
+					let relatedTopicsArray = jsonResult["RelatedTopics"] as! NSArray
+					for relatedTopic in relatedTopicsArray {
+						let textShown = relatedTopic["Text"] as? String
+						let firstURL = relatedTopic["FirstURL"] as? String
+						if textShown != nil || firstURL != nil {
+							print("First URL result: \(firstURL)\n Text: \(textShown)")
+						}
+						//topics.append(json: textShown!)
+					}
+				}
+			} catch let error as NSError{
+					print("json error: \(error.localizedDescription)")
+				}
 			}
-	}
 	
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

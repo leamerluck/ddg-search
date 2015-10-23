@@ -10,13 +10,12 @@ import Foundation
 import UIKit
 
 class Topic {
-	var result: String?
 	var first_url: String?
-	var text: String?
+	var textShown: String?
 	
 	init(json: NSDictionary) {
-		self.result = json["Result"] as? String
 		self.first_url = json["FirstURL"] as? String
-		self.text = json["Text"] as? String
+		self.textShown = json["Text"] as? String
+		
 	}
 }
