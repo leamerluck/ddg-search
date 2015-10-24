@@ -111,18 +111,18 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" pagingEnabled="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="NGL-BZ-Lpp">
-                                <rect key="frame" x="4" y="109" width="312" height="451"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" pagingEnabled="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="NGL-BZ-Lpp">
+                                <rect key="frame" x="0.0" y="109" width="320" height="451"/>
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="sectionIndexColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="sectionIndexBackgroundColor" red="1" green="0.49803921569999998" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" layoutMarginsFollowReadableWidth="YES" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="resultCell" id="VFm-c5-18N">
-                                        <rect key="frame" x="0.0" y="28" width="312" height="100"/>
+                                        <rect key="frame" x="0.0" y="28" width="320" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" layoutMarginsFollowReadableWidth="YES" tableViewCell="VFm-c5-18N" id="MG0-8J-ESc">
-                                            <rect key="frame" x="0.0" y="0.0" width="312" height="99.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="99.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <animations/>
                                         </tableViewCellContentView>
@@ -141,11 +141,11 @@
                             <constraint firstItem="Xma-CL-ILL" firstAttribute="top" secondItem="NGL-BZ-Lpp" secondAttribute="bottom" constant="8" symbolic="YES" id="3YG-WB-J4T"/>
                             <constraint firstItem="45v-Td-Gf6" firstAttribute="leading" secondItem="Cz0-AZ-cF2" secondAttribute="leadingMargin" constant="-16" id="EgI-1P-Jag"/>
                             <constraint firstItem="Xma-CL-ILL" firstAttribute="top" secondItem="NGL-BZ-Lpp" secondAttribute="bottom" constant="8" id="K0f-oa-e7a"/>
-                            <constraint firstItem="NGL-BZ-Lpp" firstAttribute="top" secondItem="SiC-hY-lng" secondAttribute="bottom" constant="36" id="VCT-wO-FiE"/>
+                            <constraint firstItem="NGL-BZ-Lpp" firstAttribute="top" secondItem="SiC-hY-lng" secondAttribute="bottom" constant="45" id="VCT-wO-FiE"/>
                             <constraint firstAttribute="trailingMargin" secondItem="45v-Td-Gf6" secondAttribute="trailing" constant="-16" id="aur-22-A1a"/>
-                            <constraint firstItem="NGL-BZ-Lpp" firstAttribute="leading" secondItem="Cz0-AZ-cF2" secondAttribute="leadingMargin" constant="-12" id="dMV-kb-nYk"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="NGL-BZ-Lpp" secondAttribute="trailing" constant="-12" id="gwD-Mc-kWO"/>
-                            <constraint firstItem="NGL-BZ-Lpp" firstAttribute="top" secondItem="45v-Td-Gf6" secondAttribute="bottom" constant="-1" id="hO8-UA-5lR"/>
+                            <constraint firstItem="NGL-BZ-Lpp" firstAttribute="leading" secondItem="Cz0-AZ-cF2" secondAttribute="leadingMargin" constant="-16" id="dMV-kb-nYk"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="NGL-BZ-Lpp" secondAttribute="trailing" constant="-16" id="gwD-Mc-kWO"/>
+                            <constraint firstItem="NGL-BZ-Lpp" firstAttribute="top" secondItem="45v-Td-Gf6" secondAttribute="bottom" constant="8" id="hO8-UA-5lR"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="0RE-TF-wyY">
