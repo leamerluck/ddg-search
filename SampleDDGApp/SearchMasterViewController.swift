@@ -13,7 +13,6 @@ class SearchMasterViewController: UIViewController {
 	@IBOutlet weak var searchTopic: UITextField!
 	
 	@IBAction func searchRequestButton(sender: UIButton) {
-		self.performSegueWithIdentifier("resultsSegue", sender: sender)
 	}
 	
 	override func viewDidLoad() {

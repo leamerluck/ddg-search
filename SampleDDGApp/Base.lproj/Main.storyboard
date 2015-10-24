@@ -101,28 +101,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="20" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="NGL-BZ-Lpp">
-                                <rect key="frame" x="4" y="100" width="312" height="460"/>
-                                <animations/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <color key="sectionIndexColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <color key="sectionIndexBackgroundColor" red="1" green="0.49803921569999998" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="resultCell" id="dUV-hi-ivN">
-                                        <rect key="frame" x="0.0" y="92" width="312" height="20"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dUV-hi-ivN" id="yM9-eh-iyb">
-                                            <rect key="frame" x="0.0" y="0.0" width="312" height="19.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <animations/>
-                                        </tableViewCellContentView>
-                                        <animations/>
-                                    </tableViewCell>
-                                </prototypes>
-                                <connections>
-                                    <outlet property="dataSource" destination="0ch-sY-JtP" id="bZr-ax-5rp"/>
-                                </connections>
-                            </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="45v-Td-Gf6">
                                 <rect key="frame" x="0.0" y="72" width="320" height="29"/>
                                 <animations/>
@@ -133,12 +111,36 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" pagingEnabled="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="NGL-BZ-Lpp">
+                                <rect key="frame" x="4" y="109" width="312" height="451"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="sectionIndexColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="sectionIndexBackgroundColor" red="1" green="0.49803921569999998" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" layoutMarginsFollowReadableWidth="YES" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="resultCell" id="VFm-c5-18N">
+                                        <rect key="frame" x="0.0" y="28" width="312" height="100"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" layoutMarginsFollowReadableWidth="YES" tableViewCell="VFm-c5-18N" id="MG0-8J-ESc">
+                                            <rect key="frame" x="0.0" y="0.0" width="312" height="99.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <animations/>
+                                        </tableViewCellContentView>
+                                        <animations/>
+                                    </tableViewCell>
+                                </prototypes>
+                                <sections/>
+                                <connections>
+                                    <outlet property="dataSource" destination="0ch-sY-JtP" id="hts-R8-lTW"/>
+                                </connections>
+                            </tableView>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" red="1" green="0.49803921569999998" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="Xma-CL-ILL" firstAttribute="top" secondItem="NGL-BZ-Lpp" secondAttribute="bottom" constant="8" symbolic="YES" id="3YG-WB-J4T"/>
                             <constraint firstItem="45v-Td-Gf6" firstAttribute="leading" secondItem="Cz0-AZ-cF2" secondAttribute="leadingMargin" constant="-16" id="EgI-1P-Jag"/>
+                            <constraint firstItem="Xma-CL-ILL" firstAttribute="top" secondItem="NGL-BZ-Lpp" secondAttribute="bottom" constant="8" id="K0f-oa-e7a"/>
                             <constraint firstItem="NGL-BZ-Lpp" firstAttribute="top" secondItem="SiC-hY-lng" secondAttribute="bottom" constant="36" id="VCT-wO-FiE"/>
                             <constraint firstAttribute="trailingMargin" secondItem="45v-Td-Gf6" secondAttribute="trailing" constant="-16" id="aur-22-A1a"/>
                             <constraint firstItem="NGL-BZ-Lpp" firstAttribute="leading" secondItem="Cz0-AZ-cF2" secondAttribute="leadingMargin" constant="-12" id="dMV-kb-nYk"/>
@@ -146,7 +148,9 @@
                             <constraint firstItem="NGL-BZ-Lpp" firstAttribute="top" secondItem="45v-Td-Gf6" secondAttribute="bottom" constant="-1" id="hO8-UA-5lR"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="0RE-TF-wyY"/>
+                    <navigationItem key="navigationItem" id="0RE-TF-wyY">
+                        <barButtonItem key="backBarButtonItem" title="New Search" id="ISJ-sO-Sxv"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="queryTopic" destination="45v-Td-Gf6" id="NTh-eB-0D7"/>
                     </connections>
